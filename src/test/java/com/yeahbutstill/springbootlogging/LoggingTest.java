@@ -18,4 +18,12 @@ public class LoggingTest {
         log.trace("log3");
         log.warn("log4");
     }
+
+    @Test
+    void testLogSize() {
+        for (int i = 0; i < 100_000; i++) {
+            log.warn("Hello World, I LOVE JAVA {}", i);
+        }
+    }
 }
+
